@@ -31,6 +31,11 @@
             Description
         </p>
 
+        <div class="blog-filter"
+             tal:condition="request/Subject|nothing">Showing blog entries tagged as: 
+                <strong tal:content="request/Subject">[keyword]</strong>
+        </div>
+
         <metal:listingmacro define-macro="listing">
         <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
                             limit_display limit_display|request/limit_display|nothing;
@@ -131,7 +136,7 @@
                             <tal:loop repeat="subject item/Subject">
                                 <a class="item-keyword"
                                    tal:content="subject"
-                                   tal:attributes="href python:'%s/%s?%s' % (current_page_url, templateId, context.create_query_string(Subject=subject));
+                                   tal:attributes="href python:'%s/%s?%s' % (context.absolute_url(), template.id, context.create_query_string(Subject=subject));
                                                    title string:Limit to listings labelled '$subject'">[Feature Story]</a>
                             </tal:loop>
                         </div>

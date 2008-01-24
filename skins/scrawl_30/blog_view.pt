@@ -12,8 +12,7 @@
     <metal:main-macro define-macro="main"
                       tal:define="kssClassesView context/@@kss_field_decorator_view;
                                   getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
-                                  templateId template/getId;
-                                  current_page_url context/@@plone_context_state/current_page_url">
+                                  templateId template/getId;">
 
         <div tal:replace="structure provider:plone.abovecontenttitle" />
 
@@ -21,11 +20,17 @@
             Title or id
         </h1>
 
+
         <div tal:replace="structure provider:plone.belowcontenttitle" />
 
         <p metal:use-macro="here/kss_generic_macros/macros/generic_description_view">
             Description
         </p>
+
+        <div class="blog-filter"
+             tal:condition="request/Subject|nothing">Showing blog entries tagged as: 
+                <strong tal:content="request/Subject">[keyword]</strong>
+        </div>
 
         <div tal:replace="structure provider:plone.abovecontentbody" />
 
@@ -45,11 +50,11 @@
                             limit_display limit_display|request/limit_display|nothing;
                             more_url more_url|request/more_url|string:folder_contents;
                             contentsMethod python:test(here.portal_type=='Topic', here.queryCatalog, here.getFolderContents);
-                            folderContents folderContents|python:contentsMethod(contentFilter);
+                            folderContents folderContents|python:contentsMethod(contentFilter, batch=True);
+                            batch folderContents;
                             use_view_action site_properties/typesUseViewActionInListings|python:();
                             over_limit python: limit_display and len(folderContents) > limit_display;
                             folderContents python: (over_limit and folderContents[:limit_display]) or folderContents;
-                            batch folderContents;
                             portal_discussion nocall:context/portal_discussion;
                             isDiscussionAllowedFor nocall:portal_discussion/isDiscussionAllowedFor;
                             getDiscussionFor nocall:portal_discussion/getDiscussionFor;
@@ -141,7 +146,7 @@
                             <tal:loop repeat="subject item/Subject">
                                 <a class="item-keyword"
                                    tal:content="subject"
-                                   tal:attributes="href python:'%s/%s?%s' % (current_page_url, templateId, context.create_query_string(Subject=subject));
+                                   tal:attributes="href python:'%s/%s?%s' % (context.absolute_url(), templateId, context.create_query_string(Subject=subject));
                                                    title string:Limit to listings labelled '$subject'">[Feature Story]</a>
                             </tal:loop>
                         </div>
