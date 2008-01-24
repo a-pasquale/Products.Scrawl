@@ -1,0 +1,3 @@
+Changelog for Scrawl
+
+Scrawl 1.0 - Unreleased

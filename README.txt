@@ -1,0 +1,20 @@
+Description
+
+    Scrawl is a dirt-simple blog product for Plone.  It copies the "News Item"
+    content type to create a "Blog Entry" (with a slightly tweaked view template)
+    and adds an alternative view to Smart Folders (blog_view).  Note that blog_view
+    shows the entire body of each contained blog entry in it, so it's up to the user
+    to limit those results in an intelligent way so that page load doesn't take too
+    long.
+    
+    Scrawl works in Plone 2.5, 3.0, and possibly in 2.1.
+
+Installation
+
+    Place Scrawl in the Products directory of your Zope instance
+    and restart the server.  Either go to the 'Site Setup' page in Plone
+    and click on 'Add/Remove Products' or use the Quick Installer in the ZMI.
+
+Written by
+
+    ONE/Northwest <jonb@onenw.org>
