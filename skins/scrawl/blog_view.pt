@@ -114,9 +114,8 @@
                           <span i18n:translate="label_by_author">Posted by
                           <a href="#"
                              title="Read more posts by this author"
-                             tal:attributes="href string:${context/absolute_url}?Creator=${item_creator}"
+                             tal:attributes="href python:'%s/%s?%s' % (context.absolute_url(), template.id, context.create_query_string(Creator=item_creator)"
                              tal:content="python:author and author['fullname'] or item_creator"
-                             tal:omit-tag="not:author"
                              i18n:name="author">
                             Bob Dobalina
                           </a>
