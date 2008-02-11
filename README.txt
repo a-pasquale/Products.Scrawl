@@ -3,9 +3,9 @@ Description
     Scrawl is a dirt-simple blog product for Plone.  It copies the "News Item"
     content type to create a "Blog Entry" (with a slightly tweaked view template)
     and adds an alternative view to Smart Folders (blog_view).  Note that blog_view
-    shows the entire body of each contained blog entry in it, so it's up to the user
-    to limit those results in an intelligent way so that page load doesn't take too
-    long.
+    shows either the description of each contained blog entry (if it exists) or the
+    entire body in it, so it's up to the user to limit those results in an intelligent
+    way so that page loads doesn't take too long.
     
     Scrawl works in Plone 2.5, 3.0, and possibly in 2.1.
 

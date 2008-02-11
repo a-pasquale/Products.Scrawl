@@ -114,14 +114,14 @@
                           <span i18n:translate="label_by_author">Posted by
                           <a href="#"
                              title="Read more posts by this author"
-                             tal:attributes="href python:'%s/%s?%s' % (context.absolute_url(), template.id, context.create_query_string(Creator=item_creator)"
+                             tal:attributes="href python:'%s/%s?%s' % (context.absolute_url(), template.id, context.create_query_string(Creator=item_creator))"
                              tal:content="python:author and author['fullname'] or item_creator"
                              i18n:name="author">
                             Bob Dobalina
                           </a>
                           </span>
                         </tal:name>
-                        at
+                        <tal:hasEDate condition="python:item_effective !='None'">at</tal:hasEDate>
                         <span tal:replace="python:toLocalizedTime(item_effective,long_format=1)">
                         August 16, 2001 at 23:35:59
                         </span>
@@ -150,16 +150,13 @@
                     </div>
                  </div>
 
-                <p class="tileBody">
-                    <span tal:omit-tag="" tal:condition="not:item_description">
-                        &nbsp;
-                    </span>
+                <p class="tileBody" tal:condition="item_description">
                    <span class="description" tal:content="item_description">
                         description
                     </span>
                 </p>
 
-                <p class="tileBody blog-entry" tal:condition="item_text"
+                <p class="tileBody blog-entry" tal:condition="python: not item_description and item_text"
                    tal:content="structure item_text">Item Body</p>
 
                 <p class="tileFooter">
