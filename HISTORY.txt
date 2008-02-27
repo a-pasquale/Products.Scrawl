@@ -1,5 +1,9 @@
 Changelog for Scrawl
 
+Scrawl 1.0 - beta 3
+- Added External Method for migrating Quills blog entries to Scrawl [ohtogo]
+
+
 Scrawl 1.0 - beta 2
 - slimmed down blog_view so that it just shows descriptions of blog entries if they exist (full bodies otherwise) [jbaldivieso]
 

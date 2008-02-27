@@ -15,6 +15,9 @@ Installation
     and restart the server.  Either go to the 'Site Setup' page in Plone
     and click on 'Add/Remove Products' or use the Quick Installer in the ZMI.
 
+Migration
+    There is a basic migrator available for Quills -> Scrawl.  Read the docstring in Products.Scrawl.Extensions.migrate_entries for more details.  YMMV.
+
 Written by
 
     ONE/Northwest <jonb@onenw.org>
