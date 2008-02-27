@@ -1,6 +1,8 @@
 Changelog for Scrawl
 
 Scrawl 1.0 - beta 3
+- Added Blog Entries to the portal factory, so that skeleton Blog Entries don't clutter up your site
+  when you add one but don't save it. [jbaldivieso]
 - Added External Method for migrating Quills blog entries to Scrawl [ohtogo]
 
 

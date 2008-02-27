@@ -14,6 +14,10 @@ class TestProductInstallation(ScrawlTestCase):
     
     def testBlogViewAvailable(self):
         self.failUnless('blog_view' in self.portal_types.Topic.view_methods)
+
+    def testPortalFactorySetup(self):
+        self.failUnless('Blog Entry' in self.portal.portal_factory.getFactoryTypes(),
+                        '"Blog Entry" is not available in the portal factory.')
     
     def testSkinsTool(self):
         """Test the the needed file system directory views have

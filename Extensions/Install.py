@@ -24,6 +24,14 @@ def install(portal):
     blog.immediate_view = 'blogentry_view'
     out.write("Tweaked %s FTU settings" % BLOG_ENTRY_NAME)
 
+    # make Blog Entry use portal factory, so we don't have any blog entry skeletons
+    factory = getToolByName(portal, 'portal_factory')
+    types = factory.getFactoryTypes().keys()
+    if 'Blog Entry' not in types:
+        types.append('Blog Entry')
+        factory.manage_setPortalFactoryTypes(listOfTypeIds=types)
+        print >> out, "Added Blog Entry to portal factory"
+
     # install our skins
     install_subskin(portal, out, GLOBALS)
     skins_tool = getToolByName(portal, "portal_skins")
@@ -73,3 +81,9 @@ def uninstall(portal, reinstall=False):
         view_methods = [v for v in topic.view_methods if v != view]
         topic._updateProperty('view_methods', view_methods)
 
+    # remove Blog Entry from portal factory
+    factory = getToolByName(portal, 'portal_factory')
+    types = factory.getFactoryTypes().keys()
+    if 'Blog Entry' in types:
+        types.remove('Blog Entry')
+        factory.manage_setPortalFactoryTypes(listOfTypeIds=types)

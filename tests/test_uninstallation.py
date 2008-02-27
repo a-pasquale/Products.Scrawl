@@ -23,6 +23,10 @@ class TestProductUninstallation(ScrawlTestCase):
         qi.uninstallProducts(products=['Scrawl',])
         self.failIf('blog_view' in self.portal_types.Topic.view_methods)
 
+    def test_portal_factory_restored(self):
+        self.failIf('Blog Entry' in self.portal.portal_factory.getFactoryTypes(),
+                    '"Blog Entry" still in the portal factory, post uninstall.')
+
     def test_skins_restored(self):
         # no more skins
         qi = self.portal.portal_quickinstaller
