@@ -22,6 +22,7 @@ def install(portal):
     blog = getattr(portal_types, BLOG_ENTRY_NAME)
     blog.default_view = 'blogentry_view'
     blog.immediate_view = 'blogentry_view'
+    blog.allow_discussion = True
     out.write("Tweaked %s FTU settings" % BLOG_ENTRY_NAME)
 
     # make Blog Entry use portal factory, so we don't have any blog entry skeletons

@@ -20,7 +20,7 @@ class TestProductInstallation(ScrawlTestCase):
                         '"Blog Entry" is not available in the portal factory.')
     
     def testSkinsTool(self):
-        """Test the the needed file system directory views have
+        """Test that file system directory views have
            been registered with the skins tool.
         """
         if HAS_PLONE30:
