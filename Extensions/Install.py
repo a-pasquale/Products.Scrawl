@@ -22,6 +22,9 @@ def install(portal):
     blog = getattr(portal_types, BLOG_ENTRY_NAME)
     blog.default_view = 'blogentry_view'
     blog.immediate_view = 'blogentry_view'
+    view = 'blogentry_view'
+    if view not in blog.view_methods:
+        blog._updateProperty('view_methods', blog.view_methods + (view,))
     blog.allow_discussion = True
     out.write("Tweaked %s FTU settings" % BLOG_ENTRY_NAME)
 
