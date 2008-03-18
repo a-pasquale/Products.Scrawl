@@ -7,7 +7,7 @@ Description
     entire body in it, so it's up to the user to limit those results in an intelligent
     way so that page loads doesn't take too long.
     
-    Scrawl works in Plone 2.5, 3.0, and possibly in 2.1.
+    Scrawl works in Plone 2.1, 2.5, and 3.0.
 
 Installation
 
