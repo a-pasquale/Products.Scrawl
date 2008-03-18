@@ -31,10 +31,13 @@
                   </a>
               </span>
             </tal:name>
-            at
-            <span tal:replace="python:toLocalTime(context.EffectiveDate(),long_format=1)">
-            August 16, 2001 at 23:35:59
+            <tal:hasDate define="eDate context/EffectiveDate|nothing"
+                         condition="python:eDate != 'None'">
+                at
+                <span tal:replace="python:toLocalTime(eDate,long_format=1)">
+                August 16, 2001 at 23:35:59
             </span>
+            </tal:hasDate>
             |
             <a class="permalink" title="Link to this post and its comments.  Use this for bookmarking."
                tal:attributes="href context/absolute_url">Permalink</a>
