@@ -154,8 +154,7 @@
                         <a tal:attributes="href item_url"
                            title="Read comments on this post and weigh in yourself!">Read comments 
                         <span class="comment-count"
-                            tal:condition="reply_count">(
-                                <tal:commentCount replace="reply_count">1</tal:commentCount> so far)</span>
+                            tal:condition="reply_count">(<tal:commentCount replace="reply_count">1</tal:commentCount> so far)</span>
                         <span class="comment-count"
                             tal:condition="not:reply_count">(None yet)</span></a>
                     </div>
