@@ -17,7 +17,8 @@
         </h1>
 
         <div class="documentByLine"
-             tal:define="item_creator context/Creator">
+             tal:define="item_creator context/Creator;
+                         toLocalTime nocall:toLocalizedTime|nocall:context/toLocalizedTime;">
             <tal:name tal:condition="item_creator"
                 tal:define="author python:mtool.getMemberInfo(item_creator)">
               <span i18n:translate="label_by_author">Posted by 
@@ -31,7 +32,7 @@
               </span>
             </tal:name>
             at
-            <span tal:replace="python:toLocalizedTime(context.EffectiveDate(),long_format=1)">
+            <span tal:replace="python:toLocalTime(context.EffectiveDate(),long_format=1)">
             August 16, 2001 at 23:35:59
             </span>
             |

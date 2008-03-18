@@ -48,7 +48,8 @@
                             show_about python:not isAnon or site_properties.allowAnonymousViewAbout;
                             portal_discussion nocall:context/portal_discussion;
                             isDiscussionAllowedFor nocall:portal_discussion/isDiscussionAllowedFor;
-                            getDiscussionFor nocall:portal_discussion/getDiscussionFor;">
+                            getDiscussionFor nocall:portal_discussion/getDiscussionFor;
+                            toLocalTime nocall:toLocalizedTime|nocall:context/toLocalizedTime;">
         <tal:listing condition="folderContents">
                 <tal:entry tal:repeat="item folderContents">
                 <div class="tileItem visualIEFloatFix vevent" 
@@ -122,7 +123,7 @@
                           </span>
                         </tal:name>
                         <tal:hasEDate condition="python:item_effective !='None'">at</tal:hasEDate>
-                        <span tal:replace="python:toLocalizedTime(item_effective,long_format=1)">
+                        <span tal:replace="python:toLocalTime(item_effective,long_format=1)">
                         August 16, 2001 at 23:35:59
                         </span>
                         |
@@ -143,8 +144,7 @@
                         <a tal:attributes="href item_url"
                            title="Read comments on this post and weigh in yourself!">Read comments 
                         <span class="comment-count"
-                            tal:condition="reply_count">(
-                                <tal:commentCount replace="reply_count">1</tal:commentCount> so far)</span>
+                            tal:condition="reply_count">(<tal:commentCount replace="reply_count">1</tal:commentCount> so far)</span>
                         <span class="comment-count"
                             tal:condition="not:reply_count">(None yet)</span></a>
                     </div>
