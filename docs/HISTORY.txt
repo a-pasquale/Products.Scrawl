@@ -1,5 +1,8 @@
 Changelog for Scrawl
 
+Scrawl 1.1 - final
+- re-released as an egg. No other changes. [jbaldivieso]
+
 Scrawl 1.0 - final
 - Changed templates slightly to fully enable Plone 2.1 support. [jbaldivieso]
 - Cleaned up presentation of blog entries if they haven't been published yet (and therefore lack Effective Date). [jbaldivieso]
