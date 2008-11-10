@@ -11,7 +11,8 @@ setup(name='Products.Scrawl',
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Programming Language :: Python",
-        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Framework :: Plone",
+        "License :: OSI Approved :: GNU General Public License (GPL)"
         ],
       keywords='',
       author='jbaldivieso',
