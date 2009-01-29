@@ -4,6 +4,11 @@ Changelog
 Scrawl 1.2 - dev
 ------------------
 
+
+ - 'Read more' for each blog entry in the blog listing (blog_view.pt) is disabled since the full body
+  text is already shown and there is also 'Permalink' for direct link to the blog entry it self.
+  http://plone.org/products/scrawl/issues/2 - [pelle_]
+
   - added i18n support (plone 3.0) and a Danish translation [pelle_]
 
 
