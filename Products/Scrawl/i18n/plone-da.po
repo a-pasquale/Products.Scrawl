@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"POT-Creation-Date: 2008-11-23 20:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: da\n"
+"Language-Name: Danish\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: plone\n"
+
+#. Default: "A blog entry that will show up in the blog view."
+#: ./Products.Scrawl/Install.py
+msgid "A blog entry that will show up in the blog view."
+msgstr "Et blogindlæg som vises på blog-liste-visningen"
+
+#. Default: "Blog Entry"
+#: ./Products.Scrawl/Install.py
+msgid "Blog Entry"
+msgstr "Blog indlæg"
+
+#. Default: "Blog view"
+#: blog_view.pt.metadata
+msgid "Blog view"
+msgstr "Blog-liste-visning"
+
+#. Default: "View Blog Entry"
+#: blogentry_view.pt.metadata
+msgid "View Blog Entry"
+msgstr "Blogindlæg-visning"
+

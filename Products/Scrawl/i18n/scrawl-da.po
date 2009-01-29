@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Scrawl\n"
+"POT-Creation-Date: 2008-11-23 20:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: da\n"
+"Language-Name: Danish\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: scrawl\n"
+
+
+#. Default: "Filed under: ${categories}"
+#: skins/scrawl_30/blogentry_view.pt:63
+msgid "label_blog_entry_categories"
+msgstr "Kategori: ${categories}"
+
+#. Default: "at ${date}"
+#: skins/scrawl_30/blogentry_view.pt:47
+msgid "label_blog_entry_date"
+msgstr "den ${date}"
+
+#. Default: "Read comments ${comments} ${no_comments}"
+#: skins/scrawl_30/blog_view.pt:177
+msgid "label_blog_entry_read_comments"
+msgstr "Læs kommentarer ${comments} ${no_comments}"
+
+#. Default: "(None yet)"
+#: skins/scrawl_30/blog_view.pt:177
+msgid "label_blog_entry_read_comments_none_yet"
+msgstr "(Ingen)"
+
+#. Default: "(${blog_entry_count} so far)"
+#: skins/scrawl_30/blog_view.pt:176
+msgid "label_blog_entry_read_comments_so_far"
+msgstr "(${blog_entry_count} indtil nu)"
+
+#. Default: "Read comments on this post and weigh in yourself!"
+#: skins/scrawl_30/blog_view.pt:167
+msgid "label_blog_entry_read_comments_title"
+msgstr "Læs kommentarer på dette blogindlæg og bidrag med din kommentar!"
+
+#. Default: "Showing blog entries tagged as: ${keyword}"
+#: skins/scrawl_30/blog_view.pt:34
+msgid "label_blog_showing_blog_entries_tagged_as"
+msgstr "Liste over blogindlæg med emneordet: ${keyword}"
+
+#. Default: "Permalink"
+#: skins/scrawl_30/blogentry_view.pt:53
+msgid "label_perma_link"
+msgstr "Permalink"
+
+
+
+
+
+
+

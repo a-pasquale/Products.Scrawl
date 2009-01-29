@@ -25,6 +25,7 @@ def install(portal):
     view = 'blogentry_view'
     if view not in blog.view_methods:
         blog._updateProperty('view_methods', blog.view_methods + (view,))
+    blog._updateProperty('description', u'A blog entry that will show up in the blog view.')
     blog.allow_discussion = True
     out.write("Tweaked %s FTU settings" % BLOG_ENTRY_NAME)
 

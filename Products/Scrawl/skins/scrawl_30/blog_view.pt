@@ -28,8 +28,11 @@
         </p>
 
         <div class="blog-filter"
+             i18n:domain="scrawl"
+             i18n:translate="label_blog_showing_blog_entries_tagged_as"
              tal:condition="request/Subject|nothing">Showing blog entries tagged as: 
-                <strong tal:content="request/Subject">[keyword]</strong>
+                <strong i18n:name="keyword"
+                        tal:content="request/Subject">[keyword]</strong>
         </div>
 
         <div tal:replace="structure provider:plone.abovecontentbody" />
@@ -132,31 +135,51 @@
                           </a>
                           </span>
                         </tal:name>
-                        <tal:hasEDate condition="python:item_effective and item_effective != 'None'">at</tal:hasEDate>
-                        <span tal:replace="python:toLocalizedTime(item_effective,long_format=1)">
-                        August 16, 2001 at 23:35:59
-                        </span>
+                        <tal:hasEDate i18n:domain="scrawl"
+                                      i18n:translate="label_blog_entry_date"
+                                      condition="python:item_effective and item_effective != 'None'">
+                            at
+                            <span i18n:name="date"
+                                  tal:replace="python:toLocalizedTime(item_effective,long_format=1)">
+                            August 16, 2001 at 23:35:59
+                            </span>
+                        </tal:hasEDate>
                         |
                         <a class="permalink" title="Link to this post and its comments.  Use this for bookmarking."
+                           i18n:domain="scrawl"
+                           i18n:translate="label_perma_link"
                            tal:attributes="href item_url">Permalink</a>
 
                         <div class="keyword-info"
+                             i18n:domain="scrawl"
+                             i18n:translate="label_blog_entry_categories"
                              tal:condition="item/Subject">
                             Filed under: 
-                            <tal:loop repeat="subject item/Subject">
+                            <tal:loop i18n:name="categories"
+                                      repeat="subject item/Subject">
                                 <a class="item-keyword"
                                    tal:content="subject"
                                    tal:attributes="href python:'%s/%s?%s' % (context.absolute_url(), templateId, context.create_query_string(Subject=subject));
                                                    title string:Limit to listings labelled '$subject'">[Feature Story]</a>
                             </tal:loop>
                         </div>
-                    <div class="comment-info" tal:condition="python:reply_count is not False">
-                        <a tal:attributes="href item_url"
-                           title="Read comments on this post and weigh in yourself!">Read comments 
-                        <span class="comment-count"
-                            tal:condition="reply_count">(<tal:commentCount replace="reply_count">1</tal:commentCount> so far)</span>
-                        <span class="comment-count"
-                            tal:condition="not:reply_count">(None yet)</span></a>
+                    <div class="comment-info" 
+                         i18n:domain="scrawl"
+                         tal:condition="python:reply_count is not False">
+                        <a title="Read comments on this post and weigh in yourself!"
+                           tal:attributes="href item_url"
+                           i18n:translate="label_blog_entry_read_comments"
+                           i18n:attributes="title label_blog_entry_read_comments_title"
+                           >Read comments 
+                        <tal:translate i18n:name="comments"
+                            ><span class="comment-count"
+                              tal:condition="reply_count"
+                              i18n:translate="label_blog_entry_read_comments_so_far"
+                              >(<tal:commentCount i18n:name="blog_entry_count" replace="reply_count">1</tal:commentCount> so far)</span></tal:translate>
+                        <tal:translate i18n:name="no_comments"
+                            ><span class="comment-count"
+                                   tal:condition="not:reply_count"
+                                   i18n:translate="label_blog_entry_read_comments_none_yet">(None yet)</span></tal:translate></a>
                     </div>
                     </div>
 

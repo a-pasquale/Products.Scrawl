@@ -22,7 +22,7 @@
             Title
             </metal:field>
         </h1>
-
+        
         <div class="documentByLine"
              tal:define="item_creator context/Creator">
             <tal:name tal:condition="item_creator"
@@ -38,21 +38,30 @@
               </a>
               </span>
             </tal:name>
-            <tal:hasDate define="eDate context/EffectiveDate|nothing"
+            <tal:hasDate i18n:domain="scrawl"
+                         i18n:translate="label_blog_entry_date"
+                         define="eDate context/EffectiveDate|nothing"
                          condition="python:eDate != 'None'">
                 at
-                <span tal:replace="python:toLocalizedTime(eDate,long_format=1)">
+                <span i18n:name="date"
+                      tal:replace="python:toLocalizedTime(eDate,long_format=1)">
                 August 16, 2001 at 23:35:59
                 </span>
             </tal:hasDate>
             |
             <a class="permalink" title="Link to this post and its comments.  Use this for bookmarking."
+               i18n:domain="scrawl"
+               i18n:translate="label_perma_link"
                tal:attributes="href context/absolute_url">Permalink</a>
 
             <div class="keyword-info"
+                 i18n:domain="scrawl"
+                 i18n:translate="label_blog_entry_categories"
                  tal:condition="context/Subject">
                 Filed under: 
-                  <span tal:repeat="category context/Subject">
+                  <span i18n:name="categories"
+                        tal:omit-tag=""
+                        tal:repeat="category context/Subject">
                     <a href=""
                        class="link-category"
                        rel="tag"

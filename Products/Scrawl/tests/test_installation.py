@@ -20,6 +20,11 @@ class TestProductInstallation(ScrawlTestCase):
         Plone 3.0's type settings protests."""
         be = getattr(self.portal_types, BLOG_ENTRY_NAME)
         self.failUnless('blogentry_view' in be.view_methods)
+        
+    def testBlogEntryDescription(self):
+        """Blog Entry shouldn't show (type) description of the 'News Item'."""
+        be = getattr(self.portal_types, BLOG_ENTRY_NAME)
+        self.assertEquals(be.description, u'A blog entry that will show up in the blog view.')
 
     def testPortalFactorySetup(self):
         self.failUnless('Blog Entry' in self.portal.portal_factory.getFactoryTypes(),
