@@ -190,9 +190,9 @@
                         </span>
                     </p>
 
-                    <p class="tileBody blog-entry"
+                    <div class="tileBody blog-entry"
                        tal:condition="python: not item_description and item_text"
-                       tal:content="structure item_text">Item Body</p>
+                       tal:content="structure item_text">Item Body</div>
                     
                     <p class="tileFooter"
                        tal:condition="python: item_description and item_text">

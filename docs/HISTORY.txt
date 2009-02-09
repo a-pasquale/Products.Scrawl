@@ -4,6 +4,10 @@ Changelog
 Scrawl 1.2 - dev
 ------------------
 
+  - lets us a div block for the rich text in the blog_view.pt since there could be 
+  inserted various block elements and that will create invalid html like 
+  "<p><div>My special div block</div></p>". [pelle_]
+
   - (re)enabled the 'read more' but with a condition so its only shown if the body text
   isn't show http://plone.org/products/scrawl/issues/2 [pelle_]
 
