@@ -1,20 +1,24 @@
 Changelog
 =========
 
-Scrawl 1.2 - dev
-------------------
+Scrawl 1.3
+-------------------------------
 
-  - added i18n markup for the plone 2.1/2.5 layer and added various adjustments
-  added previously to the plone 3 layer. [pelle_]
+
+Scrawl 1.2 - final - 2009.10.01
+-------------------------------
+
+  - added i18n markup for the plone 2.1/2.5 layer and added various adjustments 
+    added previously to the plone 3 layer. [pelle]
 
   - lets us a div block for the rich text in the blog_view.pt since there could be 
-  inserted various block elements and that will create invalid html like 
-  "<p><div>My special div block</div></p>". [pelle_]
+    inserted various block elements and that will create invalid html like 
+    "<p><div>My special div block</div></p>". [pelle]
 
   - (re)enabled the 'read more' but with a condition so its only shown if the body text
-  isn't show http://plone.org/products/scrawl/issues/2 [pelle_]
+    isn't show http://plone.org/products/scrawl/issues/2 [pelle]
 
-  - added i18n support (plone 3.0) and a Danish translation [pelle_]
+  - added i18n support (plone 3.0) and a Danish translation [pelle]
 
 
 Scrawl 1.1 - final
