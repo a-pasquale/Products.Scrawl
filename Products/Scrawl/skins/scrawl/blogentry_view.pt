@@ -43,9 +43,12 @@
                tal:attributes="href context/absolute_url">Permalink</a>
 
             <div class="keyword-info"
+                 i18n:domain="scrawl"
+                 i18n:translate="label_blog_entry_categories"
                  tal:condition="context/Subject">
                 Filed under: 
-                  <span tal:repeat="category context/Subject">
+                  <span tal:repeat="category context/Subject"
+                        i18n:name="categories">
                     <a href=""
                        class="link-category"
                        rel="tag"
@@ -55,7 +58,7 @@
                       Category
                       </a><tal:separator condition="not: repeat/category/end">,</tal:separator>
                   </span>
-            </div>
+            </div>            
         </div>
 
         <p class="documentDescription"

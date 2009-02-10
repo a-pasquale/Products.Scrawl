@@ -4,6 +4,9 @@ Changelog
 Scrawl 1.2 - dev
 ------------------
 
+  - added i18n markup for the plone 2.1/2.5 layer and added various adjustments
+  added previously to the plone 3 layer. [pelle_]
+
   - lets us a div block for the rich text in the blog_view.pt since there could be 
   inserted various block elements and that will create invalid html like 
   "<p><div>My special div block</div></p>". [pelle_]
