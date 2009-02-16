@@ -130,6 +130,7 @@
                              tal:attributes="href string:${context/absolute_url}/${templateId}?Creator=${item_creator}"
                              tal:content="python:author and author['fullname'] or item_creator"
                              tal:omit-tag="not:author"
+                             i18n:domain="scrawl"
                              i18n:name="author"
                              i18n:attributes="title author_title">
                             Bob Dobalina
