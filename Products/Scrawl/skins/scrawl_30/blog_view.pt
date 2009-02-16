@@ -130,7 +130,8 @@
                              tal:attributes="href string:${context/absolute_url}/${templateId}?Creator=${item_creator}"
                              tal:content="python:author and author['fullname'] or item_creator"
                              tal:omit-tag="not:author"
-                             i18n:name="author">
+                             i18n:name="author"
+                             i18n:attributes="title author_title">
                             Bob Dobalina
                           </a>
                           </span>
@@ -148,6 +149,7 @@
                         <a class="permalink" title="Link to this post and its comments.  Use this for bookmarking."
                            i18n:domain="scrawl"
                            i18n:translate="label_perma_link"
+                           i18n:attributes="title label_perma_link_title"
                            tal:attributes="href item_url">Permalink</a>
                            
                         <div class="keyword-info"
