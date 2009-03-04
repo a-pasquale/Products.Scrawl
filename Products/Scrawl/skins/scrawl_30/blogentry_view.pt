@@ -62,17 +62,17 @@
                  i18n:translate="label_blog_entry_categories"
                  tal:condition="context/Subject">
                 Filed under: 
-                  <span i18n:name="categories"
-                        tal:omit-tag=""
-                        tal:repeat="category context/Subject">
-                    <a href=""
-                       class="link-category"
-                       rel="tag"
-                       tal:define="qs python:context.create_query_string(Subject=category)"
-                       tal:content="category"
-                       tal:attributes="href string:${context/portal_url}/search?${qs}">
-                      Category
+                  <span i18n:name="categories" tal:omit-tag="">
+                    <span tal:repeat="category context/Subject">
+                      <a href=""
+                         class="link-category"
+                         rel="tag"
+                         tal:define="qs python:context.create_query_string(Subject=category)"
+                         tal:content="category"
+                         tal:attributes="href string:${context/portal_url}/search?${qs}">
+                           Category
                       </a><tal:separator condition="not: repeat/category/end">,</tal:separator>
+                    </span>
                   </span>
             </div>
         </div>

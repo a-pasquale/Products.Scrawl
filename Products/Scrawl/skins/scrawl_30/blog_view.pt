@@ -152,20 +152,22 @@
                            i18n:translate="label_perma_link"
                            i18n:attributes="title label_perma_link_title"
                            tal:attributes="href item_url">Permalink</a>
-                           
+                        
                         <div class="keyword-info"
                              i18n:domain="scrawl"
                              i18n:translate="label_blog_entry_categories"
                              tal:condition="item/Subject">
                             Filed under: 
-                            <tal:loop i18n:name="categories"
-                                      repeat="subject item/Subject">
+                            <tal:loop i18n:name="categories">
+                              <span tal:repeat="subject item/Subject">
                                 <a class="item-keyword"
                                    tal:content="subject"
                                    tal:attributes="href python:'%s/%s?%s' % (context.absolute_url(), templateId, context.create_query_string(Subject=subject));
-                                                   title string:Limit to listings labelled '$subject'">[Feature Story]</a>
+                                                   title string:Limit to listings labelled '$subject'">[Feature Story]</a><tal:separator condition="not: repeat/subject/end">,</tal:separator>
+                              </span>                       
                             </tal:loop>
                         </div>
+                        
                         <div class="comment-info" 
                              i18n:domain="scrawl"
                              tal:condition="python:reply_count is not False">
