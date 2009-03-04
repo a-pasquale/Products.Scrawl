@@ -51,10 +51,10 @@ def migrate(self):
         print >> out, walker.getOutput()
     # update the portal_type
     results=cat(portal_type=migrator.dst_portal_type)
-        for brain in results:
-            ob = brain.getObject()
-            ob._setPortalTypeName(migrator.dst_portal_type)
-            ob.reindexObject(['portal_type'])
+    for brain in results:
+        ob = brain.getObject()
+        ob._setPortalTypeName(migrator.dst_portal_type)
+        ob.reindexObject(['portal_type'])
     
     # And let's also update workflows
     #print >> out, "Updating workflow"
