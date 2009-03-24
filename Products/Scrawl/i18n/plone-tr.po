@@ -1,0 +1,35 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"POT-Creation-Date: 2006-01-29 23:00+0000\n"
+"PO-Revision-Date: 2009-03-24 18:19+0000\n"
+"Last-Translator: H. Turgut Uyar <uyar@itu.edu.tr>\n"
+"Language-Team: H. Turgut Uyar <uyar@itu.edu.tr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: tr\n"
+"Language-Name: Türkçe\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: plone\n"
+
+#. Default: "Blog Entry"
+#: ./Products.Scrawl/Install.py
+msgid "Blog Entry"
+msgstr "Günlük Girdisi"
+
+#. Default: "A blog entry that will show up in the blog view."
+#: ./Products.Scrawl/Install.py
+msgid "A blog entry that will show up in the blog view."
+msgstr "Günlük görünümünde gösterilecek bir günlük girdisi."
+
+#. Default: "Blog view"
+#: blog_view.pt.metadata
+msgid "Blog view"
+msgstr "Günlük görünümü"
+
+#. Default: "View Blog Entry"
+#: blogentry_view.pt.metadata
+msgid "View Blog Entry"
+msgstr "Günlük Girdisine Bak"
