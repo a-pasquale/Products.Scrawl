@@ -1,0 +1,36 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Plone\n"
+"POT-Creation-Date: 2006-01-29 23:00+0000\n"
+"PO-Revision-Date: 2009-05-12 14:58+0200\n"
+"Last-Translator: Mark van Lent <m.van.lent@zestsoftware.nl>\n"
+"Language-Team: Zest Software <info@zestsoftware.nl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Language-Code: nl\n"
+"Language-Name: Nederlands\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: plone\n"
+"X-Is-Fallback-For: nl-be nl-nl\n"
+
+#. Default: "Blog Entry"
+#: ./Products.Scrawl/Install.py
+msgid "Blog Entry"
+msgstr "Weblog item"
+
+#. Default: "A blog entry that will show up in the blog view."
+#: ./Products.Scrawl/Install.py
+msgid "A blog entry that will show up in the blog view."
+msgstr "Een weblog item dat zichtbaar zal zijn in de weblog weergave."
+
+#. Default: "Blog view"
+#: blog_view.pt.metadata
+msgid "Blog view"
+msgstr "Weblog weergave"
+
+#. Default: "View Blog Entry"
+#: blogentry_view.pt.metadata
+msgid "View Blog Entry"
+msgstr "Bekijk weblog item"

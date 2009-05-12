@@ -4,15 +4,17 @@ Changelog
 Scrawl 1.3
 -------------------------------
 
+  - Added Dutch translations. [markvl]
+
 
 Scrawl 1.2 - final - 2009.10.01
 -------------------------------
 
-  - added i18n markup for the plone 2.1/2.5 layer and added various adjustments 
+  - added i18n markup for the plone 2.1/2.5 layer and added various adjustments
     added previously to the plone 3 layer. [pelle]
 
-  - lets us a div block for the rich text in the blog_view.pt since there could be 
-    inserted various block elements and that will create invalid html like 
+  - lets us a div block for the rich text in the blog_view.pt since there could be
+    inserted various block elements and that will create invalid html like
     "<p><div>My special div block</div></p>". [pelle]
 
   - (re)enabled the 'read more' but with a condition so its only shown if the body text
@@ -30,7 +32,7 @@ Scrawl 1.0 - final
 ------------------
 
  - Changed templates slightly to fully enable Plone 2.1 support. [jbaldivieso]
- 
+
  - Cleaned up presentation of blog entries if they haven't been published yet (and therefore lack Effective Date). [jbaldivieso]
 
 Scrawl 1.0 - beta 3
