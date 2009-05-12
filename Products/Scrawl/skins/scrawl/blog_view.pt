@@ -144,14 +144,15 @@
                              i18n:translate="label_blog_entry_categories"
                              tal:condition="item/Subject">
                             Filed under:
-                            <span i18n:name="categories">
-                            <tal:loop repeat="subject item/Subject">
+                            <tal:loop i18n:name="categories">
+                              <span tal:repeat="subject item/Subject">
                                 <a class="item-keyword"
-                                   tal:content="subject"
-                                   tal:attributes="href python:'%s/%s?%s' % (context.absolute_url(), template.id, context.create_query_string(Subject=subject));
-                                                   title string:Limit to listings labelled '$subject'">[Feature Story]</a>
+                                   tal:attributes="href python:'%s/%s?%s' % (context.absolute_url(), templateId, context.create_query_string(Subject=subject));"
+                                   title="Limit listing to entries tagged with this category"
+                                   i18n:attributes="title label_limit_listing_tagged_entries"
+                                   tal:content="subject">[Feature Story]</a><tal:separator condition="not: repeat/subject/end">,</tal:separator>
+                              </span>
                             </tal:loop>
-                            </span> 
                         </div>
                         <div class="comment-info" 
                              i18n:domain="scrawl"
