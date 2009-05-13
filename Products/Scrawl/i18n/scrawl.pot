@@ -64,3 +64,7 @@ msgstr ""
 msgid "author_title"
 msgstr ""
 
+#. Default: "Limit listing to entries tagged with this category"
+#: skins/scrawl_30/blog_view.pt:166
+msgid "label_limit_listing_tagged_entries"
+msgstr ""
