@@ -17,12 +17,12 @@ msgstr ""
 #. Default: "Filed under: ${categories}"
 #: skins/scrawl_30/blog_view.pt:158
 msgid "label_blog_entry_categories"
-msgstr ""
+msgstr "カテゴリー: ${categories}"
 
 #. Default: "at ${date}"
 #: skins/scrawl_30/blog_view.pt:142
 msgid "label_blog_entry_date"
-msgstr ""
+msgstr "最終変更日時 ${datte}"
 
 #. Default: "Read comments ${comments} ${no_comments}"
 #: skins/scrawl_30/blog_view.pt:179
