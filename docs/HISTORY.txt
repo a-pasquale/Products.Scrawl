@@ -15,7 +15,7 @@ Scrawl 1.3 - 2009.06.10
   - Fixed issue #9 (compilation problems running buildout on certain
     platforms) [jbaldivieso]
 
-  - Fixed issue #10 (Duplicate Keyword Issue) [markvl] 
+  - Fixed issue #10 (Duplicate Keyword Issue) [danipessanha]
 
 Scrawl 1.2 - final - 2009.10.01
 -------------------------------
