@@ -1,6 +1,12 @@
 Changelog
 =========
 
+Scrawl 1.3.x - UNRELEASED
+-------------------------------
+
+  - Added Czech translations. [lzdych]
+
+
 Scrawl 1.3.1 - 2009.06.11
 -------------------------------
   - No changes, but re-releasing because the egg broke during shipping.
