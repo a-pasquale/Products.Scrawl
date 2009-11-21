@@ -4,6 +4,8 @@ Changelog
 Scrawl 1.3.x - UNRELEASED
 -------------------------------
 
+  - Added support for Plone 4. [pelle]
+
   - Added Czech translations. [lzdych]
 
 

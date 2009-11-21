@@ -8,7 +8,7 @@ shows either the description of each contained blog entry (if it exists) or the
 entire body in it, so it's up to the user to limit those results in an intelligent
 way so that page loads doesn't take too long.
 
-Scrawl works in Plone 2.1, 2.5, and 3.x.
+Scrawl works in Plone 2.1, 2.5, 3.x, and 4.0.
 
 Installation
 ============
