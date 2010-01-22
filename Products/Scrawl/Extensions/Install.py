@@ -86,6 +86,12 @@ def uninstall(portal, reinstall=False):
         view_methods = [v for v in topic.view_methods if v != view]
         topic._updateProperty('view_methods', view_methods)
 
+    # reset display template for existing Topics
+    for brain in portal.portal_catalog.searchResults(portal_type="Topic"):
+       obj = brain.getObject()
+       if 'blog_view' in obj.layout:
+           obj.layout = 'folder_summary_view'
+
     # remove Blog Entry from portal factory
     factory = getToolByName(portal, 'portal_factory')
     types = factory.getFactoryTypes().keys()

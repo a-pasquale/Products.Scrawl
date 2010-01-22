@@ -3,6 +3,8 @@ Changelog
 
 Scrawl 1.3.x - UNRELEASED
 -------------------------------
+  - Uninstall resets display template for existing Collections using 
+  blog_view. Thanks to Shane Graber! [jbaldivieso]
 
   - Added support for Plone 4. [pelle]
 
