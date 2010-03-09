@@ -89,7 +89,7 @@ def uninstall(portal, reinstall=False):
     # reset display template for existing Topics
     for brain in portal.portal_catalog.searchResults(portal_type="Topic"):
        obj = brain.getObject()
-       if 'blog_view' in obj.layout:
+       if 'blog_view' in getattr(obj, 'layout', []):
            obj.layout = 'folder_summary_view'
 
     # remove Blog Entry from portal factory
