@@ -78,7 +78,7 @@ Lets have a quick look at the blog entry.
 
 There should be an image, "news item style".
 
-    >>> '<img src="http://nohost/plone/blog-entry-plone-conference-2009/image_mini" alt="Blog entry - Plone conference 2009" title="Blog entry - Plone conference 2009" height="1" width="1" class="newsImage" />' in browser.contents
+    >>> '<img src="http://nohost/plone/blog-entry-plone-conference-2009/image_mini" alt="Blog entry - Plone conference 2009" title="Blog entry - Plone conference 2009" height="1" width="1" class="newsImage" />' in browser.contents or '<img src="http://nohost/plone/blog-entry-plone-conference-2009/image_mini" alt="Blog entry - Plone conference 2009" title="" height="1" width="1" class="newsImage" />' in browser.contents
     True
 
 Tags (filed under...) should be clickable.
@@ -125,7 +125,6 @@ Lets go back to the listing
 
 There should be an image as well in the listing, "folder summary view style".
 
-    >>> '<img src="http://nohost/plone/blog-entry-plone-conference-2009/image_thumb" alt="Blog entry - Plone conference 2009" title="Blog entry - Plone conference 2009" height="1" width="1" class="tileImage" />' in browser.contents
+    >>> '<img src="http://nohost/plone/blog-entry-plone-conference-2009/image_thumb" alt="Blog entry - Plone conference 2009" title="Blog entry - Plone conference 2009" height="1" width="1" class="tileImage" />' in browser.contents or '<img src="http://nohost/plone/blog-entry-plone-conference-2009/image_thumb" alt="Blog entry - Plone conference 2009" title="" height="1" width="1" class="tileImage" />' in browser.contents
     True
-
 
