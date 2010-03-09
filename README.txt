@@ -43,6 +43,5 @@ in Products.Scrawl.Extensions.migrate_entries for more details.  YMMV.
 Written by
 ==========
 
-ONE/Northwest <jonb@onenw.org>
-
+Groundwire (formlery ONE/Northwest) <jonb@groundwire.org>
 

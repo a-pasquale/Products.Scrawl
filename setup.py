@@ -1,22 +1,21 @@
 from setuptools import setup, find_packages
-import os
 
-version = '1.3'
+version = '1.3.2'
 
 setup(name='Products.Scrawl',
       version=version,
       description="Scrawl is a dirt-simple blog product for Plone.",
       long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+                       open("CHANGES.txt").read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Programming Language :: Python",
         "Framework :: Plone",
         "License :: OSI Approved :: GNU General Public License (GPL)"
         ],
-      keywords='',
+      keywords='plone blog',
       author='jbaldivieso',
-      author_email='jonb@onenw.org',
+      author_email='jonb@groundwire.org',
       url='http://plone.org/products/scrawl',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
