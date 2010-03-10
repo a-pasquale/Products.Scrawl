@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = '1.3.2'
+version = '1.3.3dev'
 
 setup(name='Products.Scrawl',
       version=version,
