@@ -10,6 +10,7 @@
                                   len_text python:len(text.strip());
                                   object_title object_title | context/@@plone_context_state/object_title;
                                   mtool mtool | context/portal_membership;
+                                  here_url here_url | context/@@plone_context_state/object_url;
                                   is_editable is_editable | context/@@plone_context_state/is_editable;">
 
         <!--
