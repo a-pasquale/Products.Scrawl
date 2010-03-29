@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
 "POT-Creation-Date: 2006-01-29 23:00+0000\n"
-"PO-Revision-Date: 2009-03-24 18:19+0000\n"
+"PO-Revision-Date: 2010-03-29 19:27+0000\n"
 "Last-Translator: H. Turgut Uyar <uyar@itu.edu.tr>\n"
 "Language-Team: H. Turgut Uyar <uyar@itu.edu.tr>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 #. Default: "Blog Entry"
 #: ./Products.Scrawl/Install.py
 msgid "Blog Entry"
-msgstr "Günlük Girdisi"
+msgstr "Günlük girdisi"
 
 #. Default: "A blog entry that will show up in the blog view."
 #: ./Products.Scrawl/Install.py
@@ -32,4 +32,4 @@ msgstr "Günlük görünümü"
 #. Default: "View Blog Entry"
 #: blogentry_view.pt.metadata
 msgid "View Blog Entry"
-msgstr "Günlük Girdisine Bak"
+msgstr "Günlük girdisine bak"

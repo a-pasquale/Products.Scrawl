@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Scrawl\n"
 "POT-Creation-Date: 2009-01-29 14:01+0000\n"
-"PO-Revision-Date: 2009-04-06 18:01-0300\n"
+"PO-Revision-Date: 2010-03-29 19:27-0300\n"
 "Last-Translator: H. Turgut Uyar <uyar@itu.edu.tr>\n"
 "Language-Team: H. Turgut Uyar <uyar@itu.edu.tr>\n"
 "MIME-Version: 1.0\n"
@@ -32,12 +32,12 @@ msgstr "Yorumları oku ${comments} ${no_comments}"
 #. Default: "(None yet)"
 #: skins/scrawl_30/blog_view.pt:180
 msgid "label_blog_entry_read_comments_none_yet"
-msgstr "(Henüz yok)"
+msgstr "(henüz yok)"
 
 #. Default: "(${blog_entry_count} so far)"
 #: skins/scrawl_30/blog_view.pt:178
 msgid "label_blog_entry_read_comments_so_far"
-msgstr "(Şimdiye kadar ${blog_entry_count} tane)"
+msgstr "(şimdiye kadar ${blog_entry_count} tane)"
 
 #. Default: "Read comments on this post and weigh in yourself!"
 #: skins/scrawl_30/blog_view.pt:169
