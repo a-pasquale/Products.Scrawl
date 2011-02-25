@@ -1,8 +1,41 @@
 Changelog
 =========
 
-1.3.3 - unreleased
-------------------
+Scrawl 2.0b1 - 2011.02.24
+-------------------------
+
+- Brought back support for Plone 3.
+  [yomatters]
+
+- Added upgrade step.
+  [yomatters]
+
+- Added an icon for the Blog Entry type.
+  [yomatters]
+
+- Updated the i18n structure.
+  [yomatters]
+
+- Removed duplication of byline template.
+  [yomatters]
+
+- Updated templates using Plone 4 macros.
+  [yomatters]
+
+- Made blog view filterable by subject in Plone 4.
+  [yomatters]
+
+- Added support for plone.app.discussion.
+  [yomatters]
+
+- Converted view templates to Zope 3 browser views.
+  [yomatters]
+
+- Added a Zope 3 browser layer.
+  [yomatters]
+  
+- Replaced install and uninstall methods with GenericSetup profiles.
+  [yomatters]
 
 
 Scrawl 1.3.2 - 2010.03.09

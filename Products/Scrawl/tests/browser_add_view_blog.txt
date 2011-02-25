@@ -116,7 +116,7 @@ Budapest conference 2009 / sprint should be listed.
 The tags (filed under...) should also be clickable in the blog entries listing.
 
     >>> browser.getLink('python').click()
-    >>> tag_url = '%s/blog/blog_view?Subject=python' % portal_url
+    >>> tag_url = '%s/blog?Subject=python' % portal_url
     >>> browser.url == tag_url
     True 
 

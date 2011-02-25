@@ -1,0 +1,16 @@
+<configure
+    xmlns:zope="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="scrawl">
+        
+    <genericsetup:upgradeStep
+        source="*"
+        destination="2.0b1"
+        title="Upgrade Scrawl from 1.3.2 to 2.0b1"
+        description=""
+        profile="Products.Scrawl:default"
+        handler="Products.Scrawl.upgrades.upgrade_to_20b1"
+        />
+
+</configure>

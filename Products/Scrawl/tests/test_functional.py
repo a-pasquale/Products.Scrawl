@@ -13,7 +13,6 @@ import unittest
 from App.Common import package_home
 from Testing.ZopeTestCase import FunctionalDocFileSuite as Suite
 from Products.Scrawl.tests.base import ScrawlFunctionalTestCase
-from Products.Scrawl import HAS_PLONE30
 from Products.Scrawl.config import GLOBALS
 
 
@@ -25,14 +24,10 @@ OPTIONFLAGS = (
 )
 
 def list_doctests():
-    # We are pragmetic here - we'll focus on Plone 3.*, 4.*
-    # - since browsertesting and UI in Plone 2.5 is lightly different.
-    if HAS_PLONE30:
-        home = package_home(GLOBALS)
-        return [filename for filename in
-              glob.glob(os.path.sep.join([home, 'tests/*.txt']))]
-    else:
-        return []
+    home = package_home(GLOBALS)
+    return [filename for filename in
+          glob.glob(os.path.sep.join([home, 'tests/*.txt']))]
+
 
 def test_suite():
     filenames = list_doctests()

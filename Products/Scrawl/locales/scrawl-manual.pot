@@ -1,0 +1,25 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Scrawl\n"
+"POT-Creation-Date: 2006-01-29 23:00+0000\n"
+"PO-Revision-Date: 2006-01-29 23:00+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8\n"
+"Domain: scrawl\n"
+
+#. Default: "Blog view"
+#: ./browser/configure.zcml
+msgid "Blog view"
+msgstr ""
+
+#. Default: "View Blog Entry"
+#: ./browser/configure.zcml
+msgid "View Blog Entry"
+msgstr ""

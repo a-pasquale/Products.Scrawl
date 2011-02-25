@@ -1,0 +1,104 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+<body>
+
+<div metal:fill-slot="main">    
+    <tal:main-macro metal:define-macro="main"
+          tal:define="kssClassesView context/@@kss_field_decorator_view;
+                      getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                      templateId template/getId;
+                      text python:context.CookedBody(stx_level=2);
+                      len_text python:len(text.strip());
+                      ploneview context/@@plone;
+                      toLocalizedTime nocall:ploneview/toLocalizedTime;">
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <h1 metal:use-macro="context/kss_generic_macros/macros/generic_title_view">              
+            Generic KSS Title. Is rendered with class="documentFirstHeading".                    
+        </h1>
+        
+        <div class="documentByLine"
+            tal:define="item_creator context/Creator;
+                item_effective context/EffectiveDate|nothing;
+                item_subject context/Subject|nothing;
+                search_url string:${context/@@plone_portal_state/portal_url}/search;">
+            <metal:byline define-macro="blogentry-byline">
+            <tal:name tal:condition="item_creator"
+                tal:define="author python:context.portal_membership.getMemberInfo(item_creator)">
+              <span i18n:translate="label_by_author">Posted by
+              <a href="#"
+                 title="Read more posts by this author"
+                 tal:attributes="href string:${context/portal_url}/author/${item_creator}"
+                 tal:content="python:author and author['fullname'] or item_creator"
+                 tal:omit-tag="not:author"
+                 i18n:domain="scrawl"
+                 i18n:name="author"
+                 i18n:attributes="title author_title">
+                Bob Dobalina
+              </a>
+              </span>
+            </tal:name>
+            <tal:hasDate i18n:domain="scrawl"
+                         i18n:translate="label_blog_entry_date"
+                         condition="python:item_effective != 'None'">
+                at
+                <span i18n:name="date"
+                      tal:replace="python:toLocalizedTime(item_effective,long_format=1)">
+                August 16, 2001 at 23:35:59
+                </span>
+            </tal:hasDate>
+            |
+            <a class="permalink" title="Link to this post and its comments.  Use this for bookmarking."
+               i18n:domain="scrawl"
+               i18n:translate="label_perma_link"
+               i18n:attributes="title label_perma_link_title"
+               tal:attributes="href context/absolute_url">Permalink</a>
+
+            <div class="keyword-info"
+                 i18n:domain="scrawl"
+                 i18n:translate="label_blog_entry_categories"
+                 tal:condition="item_subject">
+                Filed under: 
+                  <span i18n:name="categories" tal:omit-tag="">
+                    <span tal:repeat="category item_subject">
+                      <a href=""
+                         class="link-category"
+                         rel="tag"
+                         tal:define="qs python:context.create_query_string(Subject=category)"
+                         tal:content="category"
+                         tal:attributes="href string:${search_url}?${qs}">
+                           Category
+                      </a><tal:separator condition="not: repeat/category/end">,</tal:separator>
+                    </span>
+                  </span>
+            </div>
+            </metal:byline>
+        </div>
+
+        <div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">         
+            Generic KSS Description. Is rendered with class="documentDescription".               
+        </div>
+
+        <div tal:replace="structure provider:plone.abovecontentbody" />
+        
+        <metal:block define-macro="content-core">
+            <metal:content-core use-macro="context/newsitem_view/macros/content-core" />
+        </metal:block>
+        
+        <div metal:use-macro="context/document_relateditems/macros/relatedItems">
+            Show related items if they exist
+        </div>
+        
+        <div tal:replace="structure provider:plone.belowcontentbody" />
+
+    </tal:main-macro>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="scrawl">
+
+    <genericsetup:registerProfile
+        name="default"
+        title="Scrawl"
+        directory="profiles/default"
+        description="Lightweight blogging for Plone."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <genericsetup:registerProfile
+        name="uninstall"
+        title="Uninstall Scrawl"
+        directory="profiles/uninstall"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+        
+    <genericsetup:registerProfile
+        name="upgrade_to_20b1"
+        title="Scrawl 2.0b1 Upgrade"
+        directory="profiles/upgrade_to_20b1"
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+  
+</configure>
+
+
