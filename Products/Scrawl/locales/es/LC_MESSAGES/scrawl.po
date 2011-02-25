@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Scrawl\n"
-"POT-Creation-Date: 2011-02-17 20:51+0000\n"
+"POT-Creation-Date: 2011-02-25 15:05+0000\n"
 "PO-Revision-Date: 2011-01-09 14:19+0600\n"
 "Last-Translator: Noe Nieto <tzicatl@gmail.com>\n"
 "Language-Team: es <LL@li.org>\n"
@@ -34,51 +34,61 @@ msgstr "Ver la publicación de la bitácora"
 
 #. Default: "Read more posts by this author"
 #: ./browser/blogentry_view.pt:35
+#: ./browser/blogentry_view_p3.pt:35
 msgid "author_title"
 msgstr "Lea más entradas de este autor"
 
 #. Default: "Filed under: ${categories}"
 #: ./browser/blogentry_view.pt:68
+#: ./browser/blogentry_view_p3.pt:68
 msgid "label_blog_entry_categories"
 msgstr "Archivado en: ${categories}"
 
 #. Default: "at ${date}"
 #: ./browser/blogentry_view.pt:51
+#: ./browser/blogentry_view_p3.pt:51
 msgid "label_blog_entry_date"
 msgstr "el día ${date}"
 
 #. Default: "Read comments ${comments} ${no_comments}"
 #: ./browser/blog_view.pt:77
+#: ./browser/blog_view_p3.pt:130
 msgid "label_blog_entry_read_comments"
 msgstr "Leer comentarios ${comments} ${no_comments}"
 
 #. Default: "(None yet)"
 #: ./browser/blog_view.pt:78
+#: ./browser/blog_view_p3.pt:131
 msgid "label_blog_entry_read_comments_none_yet"
 msgstr "(Ninguno aún)"
 
 #. Default: "(${blog_entry_count} so far)"
 #: ./browser/blog_view.pt:76
+#: ./browser/blog_view_p3.pt:129
 msgid "label_blog_entry_read_comments_so_far"
 msgstr "(${blog_entry_count} hasta ahora)"
 
 #. Default: "Read comments on this post and weigh in yourself!"
 #: ./browser/blog_view.pt:67
+#: ./browser/blog_view_p3.pt:120
 msgid "label_blog_entry_read_comments_title"
 msgstr "¡Lea los comentarios sobre esta entrada y escriba su opinión!"
 
 #. Default: "Showing blog entries tagged as: ${keyword}"
 #: ./browser/blog_view.pt:19
+#: ./browser/blog_view_p3.pt:47
 msgid "label_blog_showing_blog_entries_tagged_as"
 msgstr "Listado de entradas que contienen las etiquetas: ${keyword}"
 
 #. Default: "Permalink"
 #: ./browser/blogentry_view.pt:57
+#: ./browser/blogentry_view_p3.pt:57
 msgid "label_perma_link"
 msgstr "Permalink (Enlace permanente)"
 
 #. Default: "Link to this post and its comments. Use this for bookmarking."
 #: ./browser/blogentry_view.pt:57
+#: ./browser/blogentry_view_p3.pt:57
 #, fuzzy
 msgid "label_perma_link_title"
 msgstr "Enlace permanente a esta entrada y a sus comentarios. Úselo para guardarlo en sus favoritos"
