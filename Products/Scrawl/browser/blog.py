@@ -39,3 +39,33 @@ class BlogView(BrowserView):
         if 'Subject' in self.request.form:
             return {'Subject': self.request.form.get('Subject')}
         return {}
+
+    def getHome(self, id=None):
+        if id is None:
+            # If no id is passed, get the currently
+            # authenticated user.
+            mt = getToolByName(self.context, 'portal_membership')
+            member = mt.getAuthenticatedMember()
+            id = member.getUserName()
+        # Find the users home folder in the catalog.
+        catalog = getToolByName(self.context, 'portal_catalog')
+        results = catalog.searchResults(
+                    {'portal_type': 'Folder', 
+                     'path': {'query': '/Plone/members', 
+                              'depth': 2},
+                     'id': id})
+        for brain in results:
+            return brain
+
+    def getBlog(self, id=None):
+        portal_url = getToolByName(self.context, "portal_url")
+        blog = portal_url.unrestrictedTraverse(getHome(context, id).getPath())
+        return blog
+
+    def getHomeUrl(self, id=None):
+        home = self.getHome(id)
+        import logging
+        logger = logging.getLogger("blogview")
+        logger.info("home: %s" % home.getURL())
+        if home is not None:
+            return home.getURL()

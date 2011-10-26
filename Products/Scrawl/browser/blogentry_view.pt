@@ -34,7 +34,8 @@
               <span i18n:translate="label_by_author">Posted by
               <a href="#"
                  title="Read more posts by this author"
-                 tal:attributes="href string:${context/portal_url}/author/${item_creator}"
+                 tal:attributes="href
+                 python:view.getHomeUrl(item_creator)"
                  tal:content="python:author and author['fullname'] or item_creator"
                  tal:omit-tag="not:author"
                  i18n:domain="scrawl"
@@ -53,12 +54,6 @@
                 August 16, 2001 at 23:35:59
                 </span>
             </tal:hasDate>
-            |
-            <a class="permalink" title="Link to this post and its comments.  Use this for bookmarking."
-               i18n:domain="scrawl"
-               i18n:translate="label_perma_link"
-               i18n:attributes="title label_perma_link_title"
-               tal:attributes="href context/absolute_url">Permalink</a>
 
             <div class="keyword-info"
                  i18n:domain="scrawl"

@@ -28,6 +28,7 @@
         <browser:page
             for="Products.ATContentTypes.interface.IATNewsItem"
             name="blogentry_view"
+            class=".blog.BlogView"
             template="blogentry_view.pt"
     		    layer=".interfaces.IScrawlLayer"
     		    menu="plone_displayviews"
