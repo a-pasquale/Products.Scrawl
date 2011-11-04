@@ -1,0 +1,16 @@
+.DS_Store
+.installed.cfg
+.mr.developer.cfg
+.Python
+.svn
+*.egg-info
+*.pyc
+*.pyo
+*.tmproj
+*.pt.py
+*.cpt.py
+*.zpt.py
+*.html.py
+develop-eggs
+parts
+tmtags
