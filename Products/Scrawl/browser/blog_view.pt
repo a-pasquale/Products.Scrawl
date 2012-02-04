@@ -28,8 +28,9 @@
                         item_object item/getObject;
                         reply_count python:view.comment_count(item_object);
                         item_text item_object/getText|nothing;
+                        item_post_type item_object/postType|nothing;
                         search_url context/@@plone_context_state/current_base_url;"
-                    tal:attributes="class string:tileItem visualIEFloatFix vevent ${item_type_class}">
+                    tal:attributes="class string:tileItem visualIEFloatFix vevent ${item_type_class} ${item_post_type}">
 
                     <a href="#"
                        tal:attributes="href python:(item_type in use_view_action and item_url+'/view') or item_url;">

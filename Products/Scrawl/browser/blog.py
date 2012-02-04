@@ -1,5 +1,8 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
+from cloudspring.sfmembers import membership
+import re
+
 try:
     from plone.app.discussion.interfaces import IConversation, IDiscussionLayer
     HAS_PAD = True
@@ -40,32 +43,20 @@ class BlogView(BrowserView):
             return {'Subject': self.request.form.get('Subject')}
         return {}
 
-    def getHome(self, id=None):
-        if id is None:
-            # If no id is passed, get the currently
-            # authenticated user.
-            mt = getToolByName(self.context, 'portal_membership')
-            member = mt.getAuthenticatedMember()
-            id = member.getUserName()
-        # Find the users home folder in the catalog.
-        catalog = getToolByName(self.context, 'portal_catalog')
-        results = catalog.searchResults(
-                    {'portal_type': 'Folder', 
-                     'path': {'query': '/Plone/members', 
-                              'depth': 2},
-                     'id': id})
-        for brain in results:
-            return brain
+    def getHomeUrl(self, id):
+        url = membership.getHomeUrl(self.context, id) 
+        return url
 
-    def getBlog(self, id=None):
-        portal_url = getToolByName(self.context, "portal_url")
-        blog = portal_url.unrestrictedTraverse(getHome(context, id).getPath())
-        return blog
+    def isCreator(self, item_creator):
+        #item_creator = self.context.Creator()
+        mt = getToolByName(self.context, 'portal_membership')
+        member = mt.getAuthenticatedMember()
+        if member.getUserName() == item_creator:
+            return True
 
-    def getHomeUrl(self, id=None):
-        home = self.getHome(id)
-        import logging
-        logger = logging.getLogger("blogview")
-        logger.info("home: %s" % home.getURL())
-        if home is not None:
-            return home.getURL()
+    def inHomeFolder(self, id):
+        home_url = self.getHomeUrl(id)
+        current_path = self.request.URL
+        if re.search(home_url, current_path):
+          return True
+        
