@@ -44,8 +44,8 @@
               </span>
             </tal:name>
 
-            <div class="can_edit" tal:condition="python:view.isCreator(item_creator)">
-              Edit
+            <div class="can_edit create-blog-post" tal:condition="python:view.isCreator(item_creator)">
+              <a tal:attributes="href string:${context/absolute_url}/edit">Edit</a>
             </div>
             <tal:hasDate i18n:domain="scrawl"
                          i18n:translate="label_blog_entry_date"
