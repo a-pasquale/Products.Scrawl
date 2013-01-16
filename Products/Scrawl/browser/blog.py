@@ -56,7 +56,8 @@ class BlogView(BrowserView):
 
     def inHomeFolder(self, id):
         home_url = self.getHomeUrl(id)
-        current_path = self.request.URL
-        if re.search(home_url, current_path):
-          return True
+        if home_url:
+            current_path = self.request.URL
+            if re.search(home_url, current_path):
+                return True
         
