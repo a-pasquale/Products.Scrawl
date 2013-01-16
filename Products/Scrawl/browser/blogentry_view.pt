@@ -27,7 +27,7 @@
             tal:define="item_creator context/Creator;
                 item_effective context/EffectiveDate|nothing;
                 item_subject context/Subject|nothing;
-                search_url string:${context/@@plone_portal_state/portal_url}/search;">
+                search_url string:${context/@@plone_portal_state/portal_url}/@@search;">
             <metal:byline define-macro="blogentry-byline">
             <tal:name tal:condition="python: view.inHomeFolder(item_creator) is not True"
                       tal:define="author python:context.portal_membership.getMemberInfo(item_creator)">
