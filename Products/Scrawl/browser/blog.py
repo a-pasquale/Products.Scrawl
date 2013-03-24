@@ -60,4 +60,3 @@ class BlogView(BrowserView):
             current_path = self.request.URL
             if re.search(home_url, current_path):
                 return True
-        

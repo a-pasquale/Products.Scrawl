@@ -7,7 +7,11 @@
       i18n:domain="plone">
 <body>
 
-<div metal:fill-slot="main">    
+  <div metal:fill-slot="main" 
+       tal:define="ploneview nocall:context/@@plone;
+                   normalizeString nocall:ploneview/normalizeString;
+                   item_type context/portal_type;
+                   item_type_class python:'contenttype-' + normalizeString(item_type);">
     <tal:main-macro metal:define-macro="main"
           tal:define="kssClassesView context/@@kss_field_decorator_view;
                       getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
@@ -22,7 +26,7 @@
         <h1 metal:use-macro="context/kss_generic_macros/macros/generic_title_view">              
             Generic KSS Title. Is rendered with class="documentFirstHeading".                    
         </h1>
-        
+        <div tal:attributes="class string:${item_type_class}">
         <div class="documentByLine"
             tal:define="item_creator context/Creator;
                 item_url context/absolute_url;
@@ -30,7 +34,7 @@
                 item_subject context/Subject|nothing;
                 search_url string:${context/@@plone_portal_state/portal_url}/@@search;">
             <metal:byline define-macro="blogentry-byline">
-            <tal:name tal:condition="python: view.inHomeFolder(item_creator) is not True"
+            <tal:name tal:condition="python: True"
                       tal:define="author python:context.portal_membership.getMemberInfo(item_creator)">
               <span i18n:translate="label_by_author">Posted by
                 <a href="#" title="Read more posts by this author"
@@ -77,6 +81,7 @@
                   </span>
             </div>
             </metal:byline>
+        </div>
         </div>
 
         <div metal:use-macro="context/kss_generic_macros/macros/generic_description_view">         
